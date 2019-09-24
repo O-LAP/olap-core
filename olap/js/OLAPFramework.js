@@ -1,5 +1,7 @@
 
 
+
+
 function rotPointAroundCentre(point, center, axis, theta){
     point.sub(center);
     point.applyAxisAngle(axis, theta);
@@ -7,8 +9,10 @@ function rotPointAroundCentre(point, center, axis, theta){
   	let obj = new THREE.Mesh( new THREE.SphereGeometry( 12, 8, 8 ), new THREE.MeshBasicMaterial( {color: 0xff0000, transparent: true, opacity: 0.5} ) );
 	obj.position.set(point.x, point.y, point.z);
     obj.rotateOnAxis(axis, theta);
+
     return obj.position;
 }
+
 
 
 
@@ -17,7 +21,13 @@ async function wait(ms) {
 	return new Promise((resolve, reject) => setTimeout(() => resolve(), ms));
 }
 
+
+
+
 //------------------------------------
+
+
+
 
 function hasMethod(objToChk, methodName) {
 	return objToChk && typeof objToChk[methodName] === "function";
@@ -26,6 +36,8 @@ function hasMethod(objToChk, methodName) {
 function hasProperty(objToChk, propertyName) {
 	return objToChk && typeof objToChk[propertyName] === "object";
 }
+
+
 
 
 class Slice {
@@ -167,6 +179,7 @@ class Slice {
 	}	
 
 }
+
 
 
 
@@ -313,6 +326,7 @@ class SliceManager {
 		return retObj;
 	}
 }
+
 
 
 
@@ -728,6 +742,7 @@ class OLAPFramework {
 
 
 
+
 async function go() {
 	OLAP = new OLAPFramework();
 	await OLAP.init();
@@ -736,4 +751,6 @@ async function go() {
 
 
 go();
+
+
 
