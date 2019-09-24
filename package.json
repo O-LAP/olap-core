@@ -1,0 +1,11 @@
+{
+  "name": "olap-core",
+  "version": "0.0.1",
+  "description": "Core engine for O-LAP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amitlzkpa",
+  "license": "ISC"
+}
